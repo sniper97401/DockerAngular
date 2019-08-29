@@ -2,16 +2,17 @@
   background-color: #8a2be2;
 }
 
-body {
+body{
   background-color: #8a2be2;
 }
-
 .content {
   height: 100vh;
   background-color: #8a2be2;
   display: grid;
   grid-template-rows: 100px 50px 1fr 50px;
-  grid-template-areas: 'titler . . . . . . . . .' 'nav nav nav nav nav nav nav nav nav nav' 'page page page page page page page page page page';
+  grid-template-areas: 'titler . . . . . . . . .'
+                  'nav nav nav nav nav nav nav nav nav nav'
+                  'page page page page page page page page page page';
 
   /*'note note note tcontent tcontent tcontent tcontent tcontent tcontent .'*/
   /*'note note note  tcontent tcontent tcontent tcontent tcontent tcontent .'*/
@@ -65,25 +66,29 @@ h1 {
 
 .blocContent3 {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
 }
-
-.containerIconeFLottante {
+.containerIconeFLottante{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-#icone1 {
+#icone1
+{
   background-color: blue;
+  max-height: 700px;
 }
 
-#icone2 {
+#icone2
+{
   background-color: white;
+  max-height: 700px;
 }
 
-#icone3 {
+#icone3
+{
   background-color: red;
+  max-height: 700px;
 }
 
 .navbar {
@@ -107,13 +112,23 @@ div > h2 {
   text-align: center;
 }
 
-.iconeFlottante {
+.iconeFlottante
+{
   width: 200px;
   height: 200px;
   border: solid 1px black;
 
 }
 
+#icone-courses{
+}
+
+#icone-grading{
+}
+
+#icone-user
+{
+}
 
 @keyframes slidein {
   from {
@@ -145,17 +160,16 @@ div > h2 {
   }
 }
 
-@media only screen and (min-width: 1700px)and (min-height:800px){
-
-  #icone-courses{
+@media screen and (min-width: 200px) {
+  .icone-user {
     animation-duration: 3s;
-    animation-name: slidein;
+    animation-name: slideinUser;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: linear;
   }
 
-  #icone-grading{
+  .icone-grading {
     animation-duration: 3s;
     animation-name: slideinGradding;
     animation-iteration-count: infinite;
@@ -163,25 +177,11 @@ div > h2 {
     animation-timing-function: linear;
   }
 
-  #icone-user
-  {
-    animation-delay: 1s;
-    margin-top: 400px;
+  .icone-course {
     animation-duration: 3s;
-    animation-name: slideinUser;
+    animation-name: slidein;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: linear;
-  }
-}
-
-@media only screen and (min-width: 0px) and (max-width: 1689px){
-  #icone-courses {
-  }
-
-  #icone-grading {
-  }
-
-  #icone-user {
   }
 }
